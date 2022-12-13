@@ -8,3 +8,9 @@ const tabBtn = document.querySelector("#tab-btn");
 const pressEnter = document.querySelector("#input-el");
 
 let listFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
+
+// conditional
+if (listFromLocalStorage) {
+ recipes = listFromLocalStorage;
+ show(recipes);
+}
