@@ -43,3 +43,16 @@ deleteBtn.addEventListener("click", function() {
  recipes = [];
  show(recipes);
 });
+
+// function
+function show(list) {
+ let listItems = "";
+ for (let i = 0; i < list.length; i++) {
+  listItems += `
+  <li>
+   <a href="${list[i]}" target="_blank">${list[i]}</a>
+  </li>
+  `;
+ }
+ ulEl.innerHTML = listItems;
+}
